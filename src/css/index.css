@@ -1,0 +1,58 @@
+/* Navigation Bar style link */
+@import url('./component/navigation-bar.css');
+/* Side bar */
+@import url(./component/sidebar.css);
+@import url("https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap */
+:root {
+  --font-style: "Andika", sans-serif;
+  --menu-gap: 2rem;
+  --color-dark-blue: #2c4759;
+  --color-white: white;
+  --border-radius: 30px;
+  --padding-button: 5px;
+  --icon-search: 20px 0 0 20px;
+  --icon-search-bg: #e9e9e9;
+  --nav-bar-bg: #ecb176;
+  --radius-circle: 100%;
+  --side-bar-bg: #EAD8C0;
+}
+/* End Guide Line */
+
+/* We set font-size: 62.5%: use for set 1rem to 10px , as normally 1rem equal 16px */
+html {
+  font-size: 62.5%;
+}
+
+/* Use * to set the global with padding 0, margin = 0, box-sizing: border-box */
+*,
+*::after,
+*::after {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+}
+/* font use in the whole project */
+body {
+  font-family: var(--font-style);
+}
+
+/* list-style-type: use to change a default list style of ul to none */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a,
+li,
+p {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 490;
+}
+

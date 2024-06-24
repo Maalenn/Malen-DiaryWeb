@@ -1,0 +1,99 @@
+/* Container max width: use it for set screen of my website */
+.container-max-width {
+  max-width: 100%;
+  padding: 0 50px;
+}
+/* Start Navigation Bar */
+.header {
+  background: var(--nav-bar-bg);
+}
+/* Navigation Contanier */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-bar h1{
+    display:none;
+}
+/* start Logo in navigation bar */
+.logo {
+  width: 60px;
+}
+.logo img {
+  width: 100%;
+}
+
+/* start menu-top container */
+.menu-top {
+  display: flex;
+  gap: var(--menu-gap);
+  color: var(--color-dark-blue);
+}
+
+/* Start Search Container */
+.navigation-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--menu-gap)
+}
+.search-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  width: 140px;
+  height: 47px;
+  border-radius: var(--border-radius);
+  background: var(--color-white);
+}
+
+/* Search icon button */
+.search-btn {
+  height: 47px;
+  width: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--icon-search);
+  background: var(--icon-search-bg);
+}
+
+/* Search Title */
+.search-title {
+  color: #686363;
+  font-size: 16px;
+}
+/* Person Icon */
+.navigation-left > span{
+    color:var(--color-white)
+}
+/* menu-bar-icon */
+.menu-bar-icon{
+    display: none;
+    color: var(--color-dark-blue)
+}
+.menu-bar{
+    font-size: 40px;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+    .navigation-bar h1{
+        display: flex;
+    }
+    .logo-container h3 {
+        display: none;
+    } 
+    .navigation-left {
+        display: none;
+    }
+    .menu-top{
+        display:none;
+    }
+    .menu-bar-icon{
+        display: flex;
+    }
+}
+
+
