@@ -1,39 +1,69 @@
+/* Start Side Bar */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: var(--side-bar-bg);
+  justify-content: space-between;
+  position: fixed;
+  top: 115px;
+  left: 50px;
+  padding: 40px;
+  line-height: 4rem;
+  transform: translateX(0);
+  transition: all 0.2s ease-in;
+}
 
-.side-bar-cantainer{
-   padding-top: 100px;
+/* Profile in side bar */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--menu-gap);
 }
-.side-bar{
+.profile-image {
+  width: 80px;
+  height: 80px;
+  background: #ada4a4;
+  border-radius: var(--radius-circle);
+}
+/* Style of men list in side bar  */
+.side-bar-list > a > div {
+  display: flex;
+  gap: var(--menu-gap);
+  color: var(--color-dark-blue);
+  align-items: center;
+}
+.menu-side-bar .side-bar-list:nth-child(3),
+.side-bar-list:nth-child(5) {
+  margin-top: 40px;
+}
+.menu-side-bar .side-bar-list:nth-child(6) div {
+  color: #941313;
+}
+/* End Side Bar */
+
+/* Button close will show when Sidebar breakpoint display */
+.close-button {
+  display: none;
+  justify-content: end;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* Start Responsive for Side bar */
+@media screen and (max-width: 767px) {
+  .side-bar {
+    transform: translateX(-100%);
+    left: 0;
+  }
+  .side-bar.openSideBar {
+    transform: translateX(0);
+    left: 50px;
+  }
+  .close-button {
     display: flex;
-    flex-direction: column;
-    width: 200px;
-    background: var(--side-bar-bg);
-    height: 60vh;
-    justify-content: space-between;
-    text-align: center;
-    padding: 2rem;
+  }
 }
-.profile-image{
-    width: 100px;
-    height: 100px;
-    background: #ada4a4;
-    border-radius: var(--radius-circle);
-}
-.profile-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--menu-gap);
-}
-.menu-side-bar, .menu-side-bar-bottom{
-    display: flex;
-    flex-direction: column;
-    gap: var(--menu-gap)
-}
-.side-bar-list > a{
-    display: flex;
-    gap: var(--menu-gap);
-    color: var(--color-dark-blue)
-}
-.menu-side-bar-bottom li:nth-child(2) > a {
-    color: #941313;
-}
+/* End Responsive for Side Bar */
