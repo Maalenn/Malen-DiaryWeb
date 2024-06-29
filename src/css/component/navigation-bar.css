@@ -1,7 +1,7 @@
 /* Container max width: use it for set size of screen in my website */
 .container-max-width {
   max-width: 100%;
-  padding: 0 50px;
+  padding: var(--padding-center);
 }
 
 /* Start Navigation Bar */
@@ -60,7 +60,7 @@
 }
 .search-container {
   display: flex;
-  gap: 4px;
+  gap: (--menu-gap);
   align-items: center;
   width: 140px;
   height: 47px;
