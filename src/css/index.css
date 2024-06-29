@@ -5,6 +5,8 @@
 /* Import Navigation Bar component style link */
 @import url("./component/sidebar.css");
 
+@import url("./component/entry-container.css");
+
 /* Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap */
 :root {
   /* For font */
@@ -18,9 +20,12 @@
   --nav-bar-bg: #ecb176;
   --side-bar-bg: #ead8c0;
   --color-dark-red: #941313;
+  --color-title-entry: #DED0B6;
+  --popup-text-color: #C7C8CC;
   /* For border radius */
   --radius-circle: 100%;
   --border-radius: 30px;
+  --diary-radius: 10px;
   /* For padding */
   --padding-button: 5px;
   --padding-default: 40px;
@@ -28,6 +33,7 @@
   --icon-search: 20px 0 0 20px;
   /* For Margin */
   --margin-top: 40px;
+  --margin-top-ten: 10px;
 }
 /* End Guide Line */
 
@@ -70,15 +76,31 @@ p {
   margin: 0;
   font-weight: 490;
 }
+textarea:focus, input:focus{
+  outline: none;
+}
+/* Container max width: use it for set size of screen in my website */
+.container-max-width {
+  max-width: 100%;
+  padding: var(--padding-center);
+} 
 
 /* Backgroud blur style */
-#background-blur{
+.background-blur{
   position: fixed;
   top: 0;
   width: 100%;
   height: 100vh;
   background: rgba(35, 33, 33, 0.2);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   z-index: 90;
-  display: none;
+}
+.background-blur.bg-blur{
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Overflow hidden */
+html.overflow-y-hidden {
+  overflow-y: hidden;
 }

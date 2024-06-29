@@ -11,7 +11,6 @@ const dataSources = {
 // Start the component that map list menu in side bar
 const SideBarContainer = (sideContents) => {
   return `
-        <section class="side-bar-cantainer container-max-width">
           <aside class="side-bar">
             <button class="close-button" onclick="closeNavBar()">
               <span class="material-symbols-outlined">close</span>
@@ -37,7 +36,6 @@ const SideBarContainer = (sideContents) => {
               .join("")}
             </ul>
           </aside>
-        </section>
     `;
 };
 

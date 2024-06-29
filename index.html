@@ -15,17 +15,51 @@
 
   <body>
     <!-- Start background blur -->
-    <div id="background-blur"></div>
+    <div class="background-blur bg-blur"></div>
     <!-- End background blur-->
 
     <!-- Start navigation bar -->
     <navigation-bar-component data-source="nav-bar-menu-data">
     </navigation-bar-component>
     <!-- End nav bar -->
-
-    <!-- Start side bar: create it as a dashboard -->
-    <side-bar-component data-source="side-bar-data"></side-bar-component>
-    <!-- End side bar -->
+    <section class="create-entry-container container-max-width">
+      <div class="new-btn-container">
+        <button id="open-form-button" class="btn-new">+ NEW</button>
+      </div>
+    </section>
+    <section class="main-container container-max-width">
+        <!-- Start side bar: create it as a dashboard -->
+        <side-bar-component data-source="side-bar-data"></side-bar-component>
+        <!-- End side bar -->
+        <section class="main-entry">
+            <div id="entries-container"></div>
+        </section>
+        <section id="form-popup" class="main-form">
+            <form id="diary-form">
+                <section class="header1">
+                    <nav class="navigation-bar container-max-width">
+                        <div class="navigation-left">
+                            <div class="logo">
+                                <img src="/khunmalen-diary-web/src/image/logo.png" alt="Logo" />
+                            </div>
+                            <h3>Diary Website Application</h3>
+                        </div>
+                    </nav>
+                </section>
+                <section class="info-container container-max-width">
+                    <input type="date" id="date" required />
+                    <input type="text" id="title" placeholder="Untitled....." required />
+                    <textarea id="content" placeholder="Write something here......"required></textarea>
+                    <div class="btn-container-popup">
+                        <button type="submit" id="submit-button">Create</button>
+                        <button type="button" id="cancel-button">Cancel</button>
+                    </div>
+                </section>
+                
+            </form>
+        </section>
+    </section>
+    
   </body>
   <!-- Import link navigation bar component -->
   <script type="module" src="./src/js/component/nav-bar-component.js"></script>
