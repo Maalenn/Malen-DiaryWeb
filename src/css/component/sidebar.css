@@ -1,0 +1,69 @@
+/* Start Side Bar */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: var(--side-bar-bg);
+  justify-content: space-between;
+  position: fixed;
+  top: 115px;
+  left: 50px;
+  padding: var(--padding-default);
+  line-height: 4rem;
+  transform: translateX(0);
+  transition: all 0.2s ease-in;
+}
+
+/* Profile in side bar */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--menu-gap);
+}
+.profile-image {
+  width: 80px;
+  height: 80px;
+  background: #ada4a4;
+  border-radius: var(--radius-circle);
+}
+/* Style of men list in side bar  */
+.side-bar-list > a > div {
+  display: flex;
+  gap: var(--menu-gap);
+  color: var(--color-dark-blue);
+  align-items: center;
+}
+.menu-side-bar .side-bar-list:nth-child(3),
+.side-bar-list:nth-child(5) {
+  margin-top: var(--margin-top);
+}
+.menu-side-bar .side-bar-list:nth-child(6) div {
+  color: var(--color-dark-red);
+}
+/* End Side Bar */
+
+/* Button close will show when Sidebar breakpoint display */
+.close-button {
+  display: none;
+  justify-content: end;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* Start Responsive for Side bar */
+@media screen and (max-width: 767px) {
+  .side-bar {
+    transform: translateX(-100%);
+    left: 0;
+  }
+  .side-bar.open-sideBar {
+    transform: translateX(0);
+    left: 50px;
+  }
+  .close-button {
+    display: flex;
+  }
+}
+/* End Responsive for Side Bar */
