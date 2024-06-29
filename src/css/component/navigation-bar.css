@@ -1,14 +1,11 @@
-/* Container max width: use it for set size of screen in my website */
-.container-max-width {
-  max-width: 100%;
-  padding: var(--padding-center);
-}
 
 /* Start Navigation Bar */
-.header {
+.header, .header1 {
   background: var(--nav-bar-bg);
 }
-
+.header1{
+  border-radius: 8px 8px 0 0;
+}
 /* Start Navigation Contanier */
 .navigation-bar {
   display: flex;

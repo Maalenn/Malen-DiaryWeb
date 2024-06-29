@@ -1,8 +1,10 @@
 /* Start Side Bar */
+.main-container{
+  margin-top: var(--margin-top-ten);
+}
 .side-bar {
   display: flex;
   flex-direction: column;
-  width: 200px;
   background: var(--side-bar-bg);
   justify-content: space-between;
   position: fixed;
@@ -11,7 +13,10 @@
   padding: var(--padding-default);
   line-height: 4rem;
   transform: translateX(0);
-  transition: all 0.2s ease-in;
+  transition: all 0.1s ease-in;
+  margin-top: var(--margin-top);
+  z-index: 100;
+  border-radius: var(--diary-radius);
 }
 
 /* Profile in side bar */

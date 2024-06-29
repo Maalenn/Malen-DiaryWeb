@@ -1,0 +1,158 @@
+/* Start button +New: use it to create a new entry */
+.new-btn-container {
+  display: flex;
+  justify-content: end;
+}
+.btn-new {
+  background: #000;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+/* End button new */
+
+/* Start main contanier: use to scope all body code */
+.main-container {
+  display: grid;
+  grid-template-columns: 200px 3fr;
+  height: 100vh;
+  gap: var(--menu-gap);
+}
+
+/* Start Entry container: for this style apply for when we create a new entry, edit with view and delete */
+.create-entry-container {
+  margin-top: var(--margin-top-ten);
+}
+.main-entry {
+  margin-top: 13px;
+}
+.main-form {
+  display: none;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#entries-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 13px;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #faeed1;
+  color: var(--link-color);
+  height: 198px;
+}
+.entry-to-container > div {
+  font-size: 16px;
+}
+.entry-to-container p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px solid #c7c8cc;
+}
+.entry-to-container {
+  padding: 10px;
+}
+.entry-title {
+  text-align: center;
+  background: var(--color-title-entry);
+  height: 40px;
+}
+.entry-title h3 {
+  font-size: 16px;
+  color: var(--color-dark-blue);
+}
+.btn-edit-delete-container {
+  display: flex;
+  justify-content: end;
+}
+
+.edit-btn {
+  color: var(--color-dark-blue);
+}
+.delete-btn {
+  color: var(--color-dark-red);
+}
+/* End Entry container */
+
+/* Start Popup form: it loads when we click on new button */
+#diary-form {
+  width: 60%;
+  display: flex;
+  height: 80%;
+  background: var(--color-white);
+  flex-direction: column;
+  border-radius: var(--diary-radius);
+}
+#form-popup {
+  z-index: 10000;
+}
+#form-popup.show {
+  display: flex;
+}
+#form-popup.bg-blur {
+  display: flex;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 15px;
+  gap: var(--menu-gap);
+}
+#date {
+  color: var(--color-dark-blue);
+  width: 120px;
+}
+#title {
+  font-size: 32px;
+  color: var(--color-dark-blue);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  
+}
+#content {
+  font-size: 16px;
+  height: 300px;
+  width: 100%;
+  resize: none;
+}
+.btn-container-popup {
+  display: flex;
+  gap: var(--menu-gap);
+  margin-top: var(--margin-top);
+}
+#submit-button,
+#cancel-button {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: var(--diary-radius);
+}
+#cancel-button {
+  background: var(--color-dark-red);
+}
+/* End Popup form */
+@media screen and (max-width: 767px) {
+  .main-container {
+    grid-template-columns: 0px 3fr;
+  }
+}
