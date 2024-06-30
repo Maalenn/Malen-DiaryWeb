@@ -1,4 +1,4 @@
-// Create entry and form popup component
+// Create entry and form popup c
 const FormPopupEntryContainer = () => {
     return `
         <section class="main-entry">
@@ -25,7 +25,6 @@ const FormPopupEntryContainer = () => {
                         <button type="button" id="cancel-button">Cancel</button>
                     </div>
                 </section>
-                
             </form>
         </section>
       `;
