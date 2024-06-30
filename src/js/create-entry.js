@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     openFormButton.addEventListener("click", () => {
       formPopup.classList.add("show");
       // Make what is behind form non-scrollable
-      document.querySelector("html").classList.remove("overflow-y-hidden");
+      document.querySelector("html").classList.add("overflow-y-hidden");
       // Make what is behind form blur
       document.querySelector(".background-blur").classList.remove("bg-blur");
       //Change z-index of side bar
@@ -22,9 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
       form.dataset.mode = "";
       form.dataset.index = "";
       // Allow scrolling
-      document.querySelector("html").classList.add("overflow-y-hidden");
+      document.querySelector("html").classList.remove("overflow-y-hidden");
       // Remove blur from background
       document.querySelector(".background-blur").classList.add("bg-blur");
+      //Change z-index of side bar
+      document.querySelector(".side-bar").style.zIndex = "99";
     });
   
     form.addEventListener("submit", (e) => {
@@ -50,9 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset();
         formPopup.classList.remove("show");
         // Allow scrolling
-        document.querySelector("html").classList.add("overflow-y-hidden");
+        document.querySelector("html").classList.remove("overflow-y-hidden");
         // Remove blur from background
         document.querySelector(".background-blur").classList.add("bg-blur");
+        //Change z-index of side bar
+        document.querySelector(".side-bar").style.zIndex = "99";
       } else {
         alert("Please fill in all fields.");
       }
@@ -106,9 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
       form.dataset.mode = "edit";
       form.dataset.index = index;
       // Make what is behind form non-scrollable
-      document.querySelector("html").classList.add("overflow-y-hidden");
+      document.querySelector("html").classList.remove("overflow-y-hidden");
       // Make what is behind form blur
-      document.querySelector(".background-blur").classList.add("bg-blur");
+      document.querySelector(".background-blur").classList.remove("bg-blur");
+      //Change z-index of side bar
+      document.querySelector(".side-bar").style.zIndex = "1";
     };
   
     window.deleteEntry = (index) => {

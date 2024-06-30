@@ -8,13 +8,13 @@
   flex-direction: column;
   justify-content: space-between;
   background: var(--side-bar-bg);
-  top: 100px;
+  top: 120px;
   left: 50px;
   padding: var(--padding-default);
   line-height: 4rem;
   transform: translateX(0);
   transition: all 0.1s ease-in;
-  margin-top: var(--margin-top);
+  margin-top: var(--margin-top-ten);
   z-index: 100;
   border-radius: var(--diary-radius);
 }
