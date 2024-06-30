@@ -1,6 +1,6 @@
 
 /* Start Navigation Bar */
-.header, .header1 {
+.header, .header1{
   background: var(--nav-bar-bg);
 }
 .header1{

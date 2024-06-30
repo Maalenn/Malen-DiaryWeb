@@ -17,22 +17,30 @@
     <!-- Start background blur -->
     <div class="background-blur bg-blur"></div>
     <!-- End background blur-->
+    <section class="box">
+      <!-- Start navigation bar -->
+      <navigation-bar-component
+        data-source="nav-bar-menu-data"
+      ></navigation-bar-component>
+      <!-- End nav bar -->
+        <main class="main">
+            <section class="create-entry-container container-max-width">
+                <div class="new-btn-container">
+                  <button id="open-form-button" class="btn-new">+ NEW</button>
+                </div>
+              </section>
+              <section class="main-container container-max-width">
+                <!-- Start side bar: create it as a dashboard -->
+                <side-bar-component data-source="side-bar-data"></side-bar-component>
+                <!-- End side bar -->
+                <formpopup-entry-component> </formpopup-entry-component>
+              </section>
+        </main>
+      <!-- Start Footer -->
+    <footer-component data-source="footer-data"> </footer-component>
+    <!-- End Footer -->
+    </section>
 
-    <!-- Start navigation bar -->
-    <navigation-bar-component data-source="nav-bar-menu-data">
-    </navigation-bar-component>
-    <!-- End nav bar -->
-    <section class="create-entry-container container-max-width">
-      <div class="new-btn-container">
-        <button id="open-form-button" class="btn-new">+ NEW</button>
-      </div>
-    </section>
-    <section class="main-container container-max-width">
-        <!-- Start side bar: create it as a dashboard -->
-        <side-bar-component data-source="side-bar-data"></side-bar-component>
-        <!-- End side bar -->
-        <formpopup-entry-component> </formpopup-entry-component>
-    </section>
     
   </body>
   <!-- Import the JavaScript file for a functionality in this website -->
@@ -45,5 +53,10 @@
   <!-- Import link side bar component -->
   <script type="module" src="./src/js/component/side-bar-component.js"></script>
   <!-- Import link formpopup and entry component -->
-  <script type="module" src="./src/js/component/frompopup-entry-component.js"></script>
+  <script
+    type="module"
+    src="./src/js/component/frompopup-entry-component.js"
+  ></script>
+
+  <script type="module" src="./src/js/component/footer-component.js"></script>
 </html>

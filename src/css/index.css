@@ -4,9 +4,10 @@
 @import url("./component/navigation-bar.css");
 /* Import Navigation Bar component style link */
 @import url("./component/sidebar.css");
-
+/* Import Entry container component style link */
 @import url("./component/entry-container.css");
-
+/* Import Footer component style link */
+@import url('./component/footer.css');
 /* Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap */
 :root {
   /* For font */
@@ -99,8 +100,10 @@ textarea:focus, input:focus{
   opacity: 0;
   visibility: hidden;
 }
-
+html{
+  overflow-y: scroll;
+}
 /* Overflow hidden */
-html.overflow-y-hidden {
+.overflow-y-hidden {
   overflow-y: hidden;
 }

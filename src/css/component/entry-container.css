@@ -3,6 +3,9 @@
   display: flex;
   justify-content: end;
 }
+.new-btn-container:hover{
+  opacity: 0.8;
+}
 .btn-new {
   background: #000;
   color: white;
@@ -15,10 +18,17 @@
 .main-container {
   display: grid;
   grid-template-columns: 200px 3fr;
-  height: 100vh;
   gap: var(--menu-gap);
 }
+.box {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.main {
+  flex-grow: 1;
+}
 /* Start Entry container: for this style apply for when we create a new entry, edit with view and delete */
 .create-entry-container {
   margin-top: var(--margin-top-ten);
@@ -29,7 +39,7 @@
 .main-form {
   display: none;
   position: fixed;
-  top: 150px;
+  top: 110px;
   left: 0;
   width: 100%;
   justify-content: center;
@@ -154,5 +164,6 @@ hr {
 @media screen and (max-width: 767px) {
   .main-container {
     grid-template-columns: 0px 3fr;
+    gap:0;
   }
 }
