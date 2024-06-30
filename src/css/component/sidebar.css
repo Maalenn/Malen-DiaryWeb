@@ -3,12 +3,12 @@
   margin-top: var(--margin-top-ten);
 }
 .side-bar {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  background: var(--side-bar-bg);
   justify-content: space-between;
-  position: fixed;
-  top: 115px;
+  background: var(--side-bar-bg);
+  top: 100px;
   left: 50px;
   padding: var(--padding-default);
   line-height: 4rem;
