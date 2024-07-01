@@ -1,4 +1,4 @@
-// Start Side Bar with dynamic component
+// =====Start Side Bar with dynamic component=====
 
 // Import data from data file
 import { SideBarData } from "../data/side-bar-data.js";
@@ -8,7 +8,7 @@ const dataSources = {
   "side-bar-data": SideBarData,
 };
 
-// Start the component that map list menu in side bar
+// =====Start the component that map list menu in side bar=====
 const SideBarContainer = (sideContents) => {
   return `
           <aside class="side-bar">
@@ -38,6 +38,7 @@ const SideBarContainer = (sideContents) => {
           </aside>
     `;
 };
+// =====End the component that map list menu in side bar===== 
 
 // Create one class to working with my component
 class SideBarMenu extends HTMLElement {
@@ -51,4 +52,4 @@ class SideBarMenu extends HTMLElement {
 // For the 'side-bar-component' is component's name
 customElements.define("side-bar-component", SideBarMenu);
 
-// End the component that map list menu in side bar
+// =====End the component that map list menu in side bar=====
