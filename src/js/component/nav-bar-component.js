@@ -13,7 +13,7 @@ const NavigationBarContainer = (menuContents) => {
   return `
         <header class="header">
             <nav class="navigation-bar container-max-width">
-                <button class="menu-bar-icon" onclick="openNavBar()">
+                <button class="menu-bar-icon" onclick="openSideBar()">
                     <span class="material-symbols-outlined menu-bar"> menu </span>
                 </button>
                     <h1>Diary Website Application</h1>

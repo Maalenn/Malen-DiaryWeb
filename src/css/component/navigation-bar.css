@@ -81,7 +81,7 @@
 /* Search Title */
 .search-title {
   color: #686363;
-  font-size: 16px;
+  font-size: var(--font-list);
 }
 
 /* Person Icon */

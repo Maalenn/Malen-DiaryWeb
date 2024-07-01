@@ -29,17 +29,17 @@
   gap: var(--menu-gap);
 }
 .main-entry {
-  margin-top: 13px;
+  margin-top: var(----main-entry-margin-top);
 }
 /* Main entries container: all entries after create will appended to this scope */
 #entries-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-  margin-top: 13px;
+  gap: var(--menu-gap);
+  margin-top: var(----main-entry-margin-top);
 }
 .entry-to-container > div {
-  font-size: 16px;
+  font-size: var(--font-list);
 }
 .entry {
   display: flex;
@@ -72,7 +72,7 @@ hr {
 
 /* Entry title in entry container */
 .entry-title h3 {
-  font-size: 16px;
+  font-size: var(--font-list);
   color: var(--color-dark-blue);
 }
 
@@ -161,7 +161,7 @@ hr {
 
 /* Entry content of form popup*/
 #content {
-  font-size: 16px;
+  font-size: var(--font-list);
   height: 300px;
   width: 100%;
   resize: none;
@@ -191,7 +191,7 @@ hr {
 @media screen and (max-width: 767px) {
   .main-container {
     grid-template-columns: 0px 3fr;
-    gap:0;
+    gap: 0;
   }
 }
 
