@@ -13,6 +13,7 @@
 :root {
   /* For font */
   --font-style: "Andika", sans-serif;
+  --font-list: 16px;
   /* For Gap */
   --menu-gap: 2rem;
   /* For color and backgroun-color */
@@ -36,6 +37,7 @@
   /* For Margin */
   --margin-top: 40px;
   --margin-top-ten: 10px;
+  --main-entry-margin-top : 13px;
 }
 /* =====End Guide Line===== */
 
