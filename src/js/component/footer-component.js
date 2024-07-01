@@ -1,4 +1,4 @@
-// Start Navigation Bar with dynamic component
+// =====Start Navigation Bar with dynamic component=====
 
 // Import data from data file 
 import { FooterData } from "../data/footer-data.js";
@@ -8,7 +8,7 @@ const dataSources = {
   "footer-data": FooterData,
 };
 
-// Start the component that map list menu in navigation bar
+// =====Start the component that map list menu in navigation bar=====
 const FooterContainer = (footerContents) => {
   return `
         <footer class="footer">
@@ -34,8 +34,9 @@ const FooterContainer = (footerContents) => {
         </footer>
     `;
 };
+// =====End the component that map list menu in navigation bar=====
 
-// Create one class to working with my component
+// Create one class to working with footer component
 class Footer extends HTMLElement {
   connectedCallback() {
     const dataSource = this.getAttribute("data-source");
@@ -48,4 +49,4 @@ class Footer extends HTMLElement {
 customElements.define("footer-component", Footer);
 
 
-// End the component that map list menu in navigation bar
+// =====End the component that map list menu in navigation bar=====

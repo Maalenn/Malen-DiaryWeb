@@ -1,6 +1,5 @@
+/* Start Footer */
 .footer {
-    /* position: fixed;
-    bottom: 0; */
     width: 100%;
     background: var(--nav-bar-bg);
 }
@@ -20,3 +19,4 @@
     align-items: center;
     gap: var(--menu-gap)
 }
+/* End Footer */

@@ -1,94 +1,106 @@
-
+// =====Start CRUD operation (Create, Read, Update, Delete)===
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("diary-form");
-  const entriesContainer = document.getElementById("entries-container");
-  const formPopup = document.getElementById("form-popup");
-  const openFormButton = document.getElementById("open-form-button");
-  const openFormButton1 = document.getElementById("open-form-button-below");
-  const cancelButton = document.getElementById("cancel-button");
-  const createButton = document.getElementById("submit-button");
-  let entries = [];
+    // Get all elemnt using DOM
+    const form = document.getElementById("diary-form");
+    const entriesContainer = document.getElementById("entries-container");
+    const formPopup = document.getElementById("form-popup");
+    const openFormButton = document.getElementById("open-form-button");
+    const openFormButton1 = document.getElementById("open-form-button-below");
+    const cancelButton = document.getElementById("cancel-button");
+    const createButton = document.getElementById("submit-button");
+    let entries = [];
 
-  openFormButton.addEventListener("click", () => {
-    formPopup.classList.add("show");
-    disableScroll_EnableBlur();9
-  });
-  cancelButton.addEventListener("click", () => {
-    formPopup.classList.remove("show");
-    form.reset();
-    form.dataset.mode = "";
-    form.dataset.index = "";
-    
-    // Show the create button again
-    createButton.style.display = "block";
-    // Make fields editable
-    document.getElementById("title").readOnly = false;
-    document.getElementById("content").readOnly = false;
-    document.getElementById("date").readOnly = false;
+    // This function working when user click on New button in Form Popup
+    // It will show a Popup form on screen
+    openFormButton.addEventListener("click", () => {
+        formPopup.classList.add("show");
+        disableScroll_EnableBlur();
+    });
 
-    enableScroll_DisableBlur();
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const title = document.getElementById("title").value;
-    const content = document.getElementById("content").value;
-    const date = document.getElementById("date").value;
-
-    if (title && content && date) {
-      const entry = { title, content, date };
-
-      if (form.dataset.mode === "edit") {
-        const index = parseInt(form.dataset.index);
-        entries[index] = entry;
+    // This function working when user click on cancel button in Form Popup
+    // It will disable a Form popup from this web page
+    cancelButton.addEventListener("click", () => {
+        formPopup.classList.remove("show");
+        form.reset();
         form.dataset.mode = "";
         form.dataset.index = "";
-      } else {
-        entries.push(entry);
-      }
+        // Show the create button again
+        createButton.style.display = "block";
+        // Make fields editable
+        document.getElementById("title").readOnly = false;
+        document.getElementById("content").readOnly = false;
+        document.getElementById("date").readOnly = false;
 
-      saveEntries();
-      displayEntries();
-      form.reset();
-      formPopup.classList.remove("show");
-      // Show the create button again
-      createButton.style.display = "block";
-      // Make fields editable
-      document.getElementById("title").readOnly = false;
-      document.getElementById("content").readOnly = false;
-      document.getElementById("date").readOnly = false;
-      enableScroll_DisableBlur();
-    } else {
-      alert("Please fill in all fields.");
-    }
-  });
-  const disableScroll_EnableBlur = () =>{
-    // Make what is behind form non-scrollable
-    document.querySelector("html").classList.add("overflow-y-hidden");
-    // Make what is behind form blur
-    document.querySelector(".background-blur").classList.remove("bg-blur");
-    // Change z-index of side bar
-    document.querySelector(".side-bar").style.zIndex = "1";
-  }
-  const enableScroll_DisableBlur = () =>{
-    // Allow scrolling
-    document.querySelector("html").classList.remove("overflow-y-hidden");
-    // Remove blur from background
-    document.querySelector(".background-blur").classList.add("bg-blur");
-    // Change z-index of side bar
-    document.querySelector(".side-bar").style.zIndex = "99";
-  }
+        enableScroll_DisableBlur();
+    });
 
-  const saveEntries = () => {
-    localStorage.setItem("diary-entries", JSON.stringify(entries));
-  };
+    // This function working when user click on create button
+    // First it get all the information that user input then submit
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const title = document.getElementById("title").value;
+        const content = document.getElementById("content").value;
+        const date = document.getElementById("date").value;
 
-  const loadEntries = () => {
-    const storedEntries = localStorage.getItem("diary-entries");
-    entries = storedEntries ? JSON.parse(storedEntries) : [];
-  };
+        if (title && content && date) {
+        const entry = { title, content, date };
+
+        if (form.dataset.mode === "edit") {
+            const index = parseInt(form.dataset.index);
+            entries[index] = entry;
+            form.dataset.mode = "";
+            form.dataset.index = "";
+        } else {
+            entries.push(entry);
+        }
+
+        saveEntries();
+        displayEntries();
+        form.reset();
+        formPopup.classList.remove("show");
+        // Show the create button again
+        createButton.style.display = "block";
+        // Make fields editable
+        document.getElementById("title").readOnly = false;
+        document.getElementById("content").readOnly = false;
+        document.getElementById("date").readOnly = false;
+        enableScroll_DisableBlur();
+        } else {
+        alert("Please fill in all fields.");
+        }
+    });
+
+    // This function use for disable scroll and Enable backgroud blur
+    const disableScroll_EnableBlur = () => {
+        // Make what is behind form non-scrollable
+        document.querySelector("html").classList.add("overflow-y-hidden");
+        // Make what is behind form blur
+        document.querySelector(".background-blur").classList.remove("bg-blur");
+        // Change z-index of side bar
+        document.querySelector(".side-bar").style.zIndex = "1";
+    };
+
+    // This function use for enable scroll and disable backgroud blur
+    const enableScroll_DisableBlur = () => {
+        // Allow scrolling
+        document.querySelector("html").classList.remove("overflow-y-hidden");
+        // Remove blur from background
+        document.querySelector(".background-blur").classList.add("bg-blur");
+        // Change z-index of side bar
+        document.querySelector(".side-bar").style.zIndex = "99";
+    };
+
+    const saveEntries = () => {
+        localStorage.setItem("diary-entries", JSON.stringify(entries));
+    };
+
+    const loadEntries = () => {
+        const storedEntries = localStorage.getItem("diary-entries");
+        entries = storedEntries ? JSON.parse(storedEntries) : [];
+    };
 
   const displayEntries = () => {
+    // Main entries container: all entries after create will appended to this scope
     entriesContainer.innerHTML = "";
 
     entries.forEach((entry, index) => {
@@ -119,56 +131,61 @@ document.addEventListener("DOMContentLoaded", () => {
       entriesContainer.appendChild(entryDiv);
     });
   };
-
-  window.editEntry = (index, event) => {
-    event.stopPropagation();
-    const entry = entries[index];
-    document.getElementById("title").value = entry.title;
-    document.getElementById("content").value = entry.content;
-    document.getElementById("date").value = entry.date;
-    formPopup.classList.add("show");
-    form.dataset.mode = "edit";
-    form.dataset.index = index;
-    // Show the create button
-    createButton.style.display = "block";
-    // Make fields editable
+    // This function working when user click every where on entry accept  edit and delete icon
+    window.viewEntry = (index) => {
+        const entry = entries[index];
+        const titleElement = document.getElementById("title");
+        const contentElement = document.getElementById("content");
+        const dateElement = document.getElementById("date");
     
-    document.getElementById("title").readOnly = false;
-    document.getElementById("content").readOnly = false;
-    document.getElementById("date").readOnly = false;
+        titleElement.value = entry.title;
+        contentElement.value = entry.content;
+        dateElement.value = entry.date;
+    
+        // Set fields to readonly
+        titleElement.readOnly = true;
+        contentElement.readOnly = true;
+        dateElement.readOnly = true;
+    
+        // Hide the create button
+        createButton.style.display = "none";
+        formPopup.classList.add("show");
+        form.dataset.mode = "view";
+        disableScroll_EnableBlur();
+      };
 
-    disableScroll_EnableBlur();
+    // This function working when user click on edit icon on entry
+    window.editEntry = (index, event) => {
+        event.stopPropagation();
+        const entry = entries[index];
+        document.getElementById("title").value = entry.title;
+        document.getElementById("content").value = entry.content;
+        document.getElementById("date").value = entry.date;
+        formPopup.classList.add("show");
+        form.dataset.mode = "edit";
+        form.dataset.index = index;
+        // Show the create button
+        createButton.style.display = "block";
+        // Make fields editable
+
+        document.getElementById("title").readOnly = false;
+        document.getElementById("content").readOnly = false;
+        document.getElementById("date").readOnly = false;
+
+        disableScroll_EnableBlur();
   };
 
-  window.viewEntry = (index) => {
-    const entry = entries[index];
-    const titleElement = document.getElementById("title");
-    const contentElement = document.getElementById("content");
-    const dateElement = document.getElementById("date");
+  // This function working when user click on trash icon on entry
+    window.deleteEntry = (index, event) => {
+        event.stopPropagation();
+        entries.splice(index, 1);
+        saveEntries();
+        displayEntries();
+    };
 
-    titleElement.value = entry.title;
-    contentElement.value = entry.content;
-    dateElement.value = entry.date;
-
-    // Set fields to readonly
-    titleElement.readOnly = true;
-    contentElement.readOnly = true;
-    dateElement.readOnly = true;
-    // Hide the create button
-    createButton.style.display = "none";
-    formPopup.classList.add("show");
-    form.dataset.mode = "view";
-    disableScroll_EnableBlur();
-  };
-
-  window.deleteEntry = (index, event) => {
-    event.stopPropagation();
-    entries.splice(index, 1);
-    saveEntries();
+    // Initial load from localStorage
+    loadEntries();
     displayEntries();
-  };
-
-  // Initial load from localStorage
-  loadEntries();
-  displayEntries();
 });
+
+// =====End CRUD operation (Create, Read, Update, Delete)===

@@ -1,4 +1,6 @@
-/* Start button +New: use it to create a new entry */
+/* =====Start Body Entry container===== */
+
+/* =====Start Button +New: use it to create a new entry===== */
 .new-btn-container {
   display: flex;
   justify-content: end;
@@ -12,44 +14,32 @@
   padding: 15px;
   border-radius: 8px;
 }
-/* End button new */
+/* =====End Button +New===== */
 
-/* Start main contanier: use to scope all body code */
+/* =====Start Entry container: for this style apply for when we create a new entry, edit with view and delete===== */
+.main-scope-container {
+  flex-grow: 1;
+}
+.create-entry-container {
+  margin-top: var(--margin-top-ten);
+}
 .main-container {
   display: grid;
   grid-template-columns: 200px 3fr;
   gap: var(--menu-gap);
 }
-.box {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main {
-  flex-grow: 1;
-}
-/* Start Entry container: for this style apply for when we create a new entry, edit with view and delete */
-.create-entry-container {
-  margin-top: var(--margin-top-ten);
-}
 .main-entry {
   margin-top: 13px;
 }
-.main-form {
-  display: none;
-  position: fixed;
-  top: 110px;
-  left: 0;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
+/* Main entries container: all entries after create will appended to this scope */
 #entries-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
   margin-top: 13px;
+}
+.entry-to-container > div {
+  font-size: 16px;
 }
 .entry {
   display: flex;
@@ -62,16 +52,8 @@
   color: var(--link-color);
   height: 198px;
 }
-.entry-to-container > div {
-  font-size: 16px;
-}
-.entry-to-container p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-}
 
+/* Line in entry */
 hr {
   height: 0px;
   border: none;
@@ -80,37 +62,59 @@ hr {
 .entry-to-container {
   padding: 10px;
 }
+
+/* Entry title container */
 .entry-title {
   text-align: center;
   background: var(--color-title-entry);
   height: 40px;
 }
+
+/* Entry title in entry container */
 .entry-title h3 {
   font-size: 16px;
   color: var(--color-dark-blue);
 }
+
+/* Entry content in entry container*/
+.entry-to-container p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* Edit and Delete container in entry container*/
 .btn-edit-delete-container {
   display: flex;
   justify-content: end;
 }
 
+/* Edit Buuton in entry container*/
 .edit-btn {
   color: var(--color-dark-blue);
 }
+
+/* Delete Button in entry container*/
 .delete-btn {
   color: var(--color-dark-red);
 }
-/* End Entry container */
 
-/* Start Popup form: it loads when we click on new button */
-#diary-form {
-  width: 60%;
-  display: flex;
-  height: 80%;
-  background: var(--color-white);
-  flex-direction: column;
-  border-radius: var(--diary-radius);
+/* =====End Entry container===== */
+
+
+/* =====Start Popup form: it loads when we click on new button===== */
+.main-form {
+  display: none;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Main form of popup*/
 #form-popup {
   z-index: 10000;
 }
@@ -120,16 +124,32 @@ hr {
 #form-popup.bg-blur {
   display: flex;
 }
+
+/*Sub form of popup*/
+#diary-form {
+  width: 60%;
+  display: flex;
+  height: 80%;
+  background: var(--color-white);
+  flex-direction: column;
+  border-radius: var(--diary-radius);
+}
+
+/* Inside has date, content, title */
 .info-container {
   display: flex;
   flex-direction: column;
   margin: 40px 15px;
   gap: var(--menu-gap);
 }
+
+/* Entry date of form popup*/
 #date {
   color: var(--color-dark-blue);
   width: 120px;
 }
+
+/* Entry title of form popup*/
 #title {
   font-size: 32px;
   color: var(--color-dark-blue);
@@ -138,17 +158,23 @@ hr {
   overflow: hidden;
   
 }
+
+/* Entry content of form popup*/
 #content {
   font-size: 16px;
   height: 300px;
   width: 100%;
   resize: none;
 }
+
+/* Button container in form popup */
 .btn-container-popup {
   display: flex;
   gap: var(--menu-gap);
   margin-top: var(--margin-top);
 }
+
+/* Create and Cancel button in form popup */
 #submit-button,
 #cancel-button {
   background: var(--color-dark-blue);
@@ -159,10 +185,14 @@ hr {
 #cancel-button {
   background: var(--color-dark-red);
 }
-/* End Popup form */
+/* =====End Popup form===== */
+
+/* Responsive for footer */
 @media screen and (max-width: 767px) {
   .main-container {
     grid-template-columns: 0px 3fr;
     gap:0;
   }
 }
+
+/* =====End Body Entry container===== */
