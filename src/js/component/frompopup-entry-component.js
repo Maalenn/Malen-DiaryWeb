@@ -1,6 +1,6 @@
-// Create entry and form popup component
+// =====Start the component form popup=====
 const FormPopupEntryContainer = () => {
-    return `
+  return `
         <section class="main-entry">
             <div id="entries-container"></div>
         </section>
@@ -25,17 +25,19 @@ const FormPopupEntryContainer = () => {
                         <button type="button" id="cancel-button">Cancel</button>
                     </div>
                 </section>
-                
             </form>
         </section>
       `;
-  };
-  
-  class FormPopupEntry extends HTMLElement {
+};
+
+// Create one class to working with Form Popup component
+class FormPopupEntry extends HTMLElement {
     connectedCallback() {
-      this.innerHTML = FormPopupEntryContainer();
+        this.innerHTML = FormPopupEntryContainer();
     }
-  }
-  
-  customElements.define("formpopup-entry-component", FormPopupEntry);
-  
+}
+
+// Create a name component called 'formpopup-entry-component'
+customElements.define("formpopup-entry-component", FormPopupEntry);
+
+// =====End the component form popup=====

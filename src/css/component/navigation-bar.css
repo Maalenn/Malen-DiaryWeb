@@ -1,12 +1,11 @@
 
-/* Start Navigation Bar */
-.header, .header1 {
+/* =====Start Navigation Bar===== */
+.header, .header1{
   background: var(--nav-bar-bg);
 }
 .header1{
   border-radius: 8px 8px 0 0;
 }
-/* Start Navigation Contanier */
 .navigation-bar {
   display: flex;
   justify-content: space-between;
@@ -16,12 +15,14 @@
   display: none;
 }
 
-/* Start Navigation bar left */
+/* =====Start Navigation bar left===== */
 .navigation-left {
   display: flex;
   align-items: center;
   gap: var(--menu-gap);
 }
+
+/* Nav bar left logo */
 .logo {
   width: 60px;
 }
@@ -29,7 +30,7 @@
   width: 100%;
 }
 
-/* Menu-bar-icon */
+/* Menu-bar-icon left */
 .menu-bar-icon {
   display: none;
   color: var(--color-dark-blue);
@@ -37,24 +38,25 @@
 .menu-bar {
   font-size: 40px;
 }
+/* =====End Navigation bar left===== */
 
-/* End Navigation bar left */
-
-/* Start navigation menu container */
+/* =====Start Navigation menu container===== */
 .navigation-menu {
   display: flex;
   gap: var(--menu-gap);
   color: var(--color-dark-blue);
 }
-/* End navigation menu container */
+/* =====End Navigation menu container===== */
 
-/* Start Navigation right container */
+/* =====Start Navigation right container===== */
 .navigation-right {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--menu-gap);
 }
+
+/* Search on nav bar main container */
 .search-container {
   display: flex;
   gap: (--menu-gap);
@@ -79,16 +81,16 @@
 /* Search Title */
 .search-title {
   color: #686363;
-  font-size: 16px;
+  font-size: var(--font-list);
 }
 
 /* Person Icon */
 .navigation-right > span {
   color: var(--color-white);
 }
-/* End Navigation right container */
+/* =====End Navigation right container===== */
 
-/* Start Responsive of Navigation Bar */
+/* Responsive of Navigation Bar */
 @media screen and (max-width: 767px) {
   .navigation-bar h1 {
     display: flex;
@@ -106,4 +108,5 @@
     display: flex;
   }
 }
-/* End Responsive of Navigation Bar */
+
+/* =====End Navigation Bar===== */

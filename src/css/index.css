@@ -4,13 +4,16 @@
 @import url("./component/navigation-bar.css");
 /* Import Navigation Bar component style link */
 @import url("./component/sidebar.css");
-
+/* Import Entry container component style link */
 @import url("./component/entry-container.css");
+/* Import Footer component style link */
+@import url('./component/footer.css');
 
-/* Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap */
+/* =====Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap =====*/
 :root {
   /* For font */
   --font-style: "Andika", sans-serif;
+  --font-list: 16px;
   /* For Gap */
   --menu-gap: 2rem;
   /* For color and backgroun-color */
@@ -34,8 +37,9 @@
   /* For Margin */
   --margin-top: 40px;
   --margin-top-ten: 10px;
+  --main-entry-margin-top : 13px;
 }
-/* End Guide Line */
+/* =====End Guide Line===== */
 
 /* We set font-size: 62.5%: use for set 1rem to 10px , as normally 1rem equal 16px */
 html {
@@ -76,14 +80,30 @@ p {
   margin: 0;
   font-weight: 490;
 }
+
+/* Remove outline when focus on textarea and input */
 textarea:focus, input:focus{
   outline: none;
 }
-/* Container max width: use it for set size of screen in my website */
+
+/* =====Start Main contanier: use to scope all body code===== */
+.body-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* =====End Main contanier: use to scope all body code===== */
+
+/* Container max width: use it for set a size of screen in my website */
 .container-max-width {
   max-width: 100%;
   padding: var(--padding-center);
 } 
+
+/* Main contanier of side bar container and entries container */
+.main-container{
+  margin-top: var(--margin-top-ten);
+}
 
 /* Backgroud blur style */
 .background-blur{
@@ -95,12 +115,19 @@ textarea:focus, input:focus{
   backdrop-filter: blur(2px);
   z-index: 90;
 }
+
+/* Disable blur background when side bar break point or form popup not yet show */
 .background-blur.bg-blur{
   opacity: 0;
   visibility: hidden;
 }
 
-/* Overflow hidden */
-html.overflow-y-hidden {
+/* Visible scroll when side bar break point or form popup not yet show */
+html{
+  overflow-y: scroll;
+}
+
+/* Disable scroll when side bar break point or form popup show */ */
+.overflow-y-hidden {
   overflow-y: hidden;
 }

@@ -1,0 +1,22 @@
+/* Start Footer */
+.footer {
+    width: 100%;
+    background: var(--nav-bar-bg);
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: var(--menu-gap)
+}
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--menu-gap)
+}
+/* End Footer */

@@ -1,25 +1,24 @@
-/* Start Side Bar */
-.main-container{
-  margin-top: var(--margin-top-ten);
-}
+/* =====Start Side Bar===== */
+
+/* Main side bar */
 .side-bar {
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: var(--side-bar-bg);
-  top: 100px;
+  top: 120px;
   left: 50px;
   padding: var(--padding-default);
   line-height: 4rem;
   transform: translateX(0);
   transition: all 0.1s ease-in;
-  margin-top: var(--margin-top);
+  margin-top: var(--margin-top-ten);
   z-index: 100;
   border-radius: var(--diary-radius);
 }
 
-/* Profile in side bar */
+/* Profile container in side bar */
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -32,7 +31,8 @@
   background: #ada4a4;
   border-radius: var(--radius-circle);
 }
-/* Style of men list in side bar  */
+
+/* Menu list in side bar  */
 .side-bar-list > a > div {
   display: flex;
   gap: var(--menu-gap);
@@ -43,10 +43,11 @@
 .side-bar-list:nth-child(5) {
   margin-top: var(--margin-top);
 }
+
+/* last child of menu list in side bar */
 .menu-side-bar .side-bar-list:nth-child(6) div {
   color: var(--color-dark-red);
 }
-/* End Side Bar */
 
 /* Button close will show when Sidebar breakpoint display */
 .close-button {
@@ -57,7 +58,7 @@
   right: 10px;
 }
 
-/* Start Responsive for Side bar */
+/* Responsive for Side bar */
 @media screen and (max-width: 767px) {
   .side-bar {
     transform: translateX(-100%);
@@ -71,4 +72,4 @@
     display: flex;
   }
 }
-/* End Responsive for Side Bar */
+/* =====End Side Bar===== */
