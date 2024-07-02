@@ -12,7 +12,7 @@ const FormPopupEntryContainer = () => {
                             <div class="logo">
                                 <img src="/khunmalen-diary-web/src/image/logo.png" alt="Logo" />
                             </div>
-                            <h3>Diary Website Application</h3>
+                            <h2>Diary Website Application</h2>
                         </div>
                     </nav>
                 </section>
