@@ -12,7 +12,7 @@ const dataSources = {
 const SideBarContainer = (sideContents) => {
   return `
           <aside class="side-bar">
-            <button class="close-button" onclick="closeSideBar()">
+            <button class="close-button" onclick="disableSideBar()">
               <span class="material-symbols-outlined">close</span>
             </button>
             <section class="app-container">

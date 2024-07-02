@@ -1,4 +1,4 @@
-function openSideBar() {
+function enableSideBar() {
   // Add class openSideBar to side-bar
   document.querySelector(".side-bar").classList.add("open-sideBar");
   // Make what is behind sidebar non-scrollable
@@ -7,7 +7,7 @@ function openSideBar() {
   document.querySelector(".background-blur").classList.remove("bg-blur");
 }
 
-function closeSideBar() {
+function disableSideBar() {
   // Remove class openSideBar from side-bar
   document.querySelector(".side-bar").classList.remove("open-sideBar");
   // Allow scrolling
