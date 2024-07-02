@@ -18,20 +18,20 @@
   border-radius: var(--diary-radius);
 }
 
-/* Profile container in side bar */
-.profile-container {
+/* app container in side bar */
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--menu-gap);
+
 }
-.profile-image {
+.app-image {
   width: 80px;
-  height: 80px;
-  background: #ada4a4;
   border-radius: var(--radius-circle);
 }
-
+.app-image > img{
+  width: 100%;
+}
 /* Menu list in side bar  */
 .side-bar-list > a > div {
   display: flex;
@@ -57,7 +57,6 @@
   top: 10px;
   right: 10px;
 }
-
 /* Responsive for Side bar */
 @media screen and (max-width: 767px) {
   .side-bar {

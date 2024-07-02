@@ -15,9 +15,11 @@ const SideBarContainer = (sideContents) => {
             <button class="close-button" onclick="closeSideBar()">
               <span class="material-symbols-outlined">close</span>
             </button>
-            <section class="profile-container">
-              <div class="profile-image"></div>
-              <h2 class="profile-name">Ma Len</h2>
+            <section class="app-container">
+              <div class="app-image">
+                <img src="/khunmalen-diary-web/src/image/logo.png" alt="" />
+              </div>
+              <h2>To Do List</h2>
             </section>
             <ul class="menu-side-bar">
             ${sideContents
