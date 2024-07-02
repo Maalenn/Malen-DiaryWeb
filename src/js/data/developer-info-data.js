@@ -18,7 +18,7 @@ export const DeveloperInfoData = [
     },
     {
       infoLabel: "Phone Number:",
-      infoDes: "+855 86 223 344",
+      infoDes: "+855 33 23 48",
     },
     {
       infoLabel: "Address:",
