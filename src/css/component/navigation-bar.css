@@ -85,7 +85,7 @@
 }
 
 /* Person Icon */
-.navigation-right > span {
+.navigation-right > a {
   color: var(--color-white);
 }
 /* =====End Navigation right container===== */

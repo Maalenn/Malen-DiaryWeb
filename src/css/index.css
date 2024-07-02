@@ -9,6 +9,7 @@
 /* Import Footer component style link */
 @import url('./component/footer.css');
 
+@import url('./calendar.css');
 /* =====Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap =====*/
 :root {
   /* For font */
@@ -25,6 +26,7 @@
   --color-dark-red: #941313;
   --color-title-entry: #DED0B6;
   --popup-text-color: #C7C8CC;
+  --calendar-bg: #F8F4E1;
   /* For border radius */
   --radius-circle: 100%;
   --border-radius: 30px;
@@ -36,6 +38,7 @@
   --icon-search: 20px 0 0 20px;
   /* For Margin */
   --margin-top: 40px;
+  --margin-top-high: 50px;
   --margin-top-ten: 10px;
   --main-entry-margin-top : 13px;
 }
