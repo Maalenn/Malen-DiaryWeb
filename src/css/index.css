@@ -8,8 +8,10 @@
 @import url("./component/entry-container.css");
 /* Import Footer component style link */
 @import url('./component/footer.css');
-
+/* Import Calendar style link */
 @import url('./calendar.css');
+/* Import Account style link */
+@import url('./contact-us.css');
 /* =====Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap =====*/
 :root {
   /* For font */
@@ -35,6 +37,7 @@
   --padding-button: 5px;
   --padding-default: 40px;
   --padding-center: 0 50px;
+  --padding-default: 15px;
   --icon-search: 20px 0 0 20px;
   /* For Margin */
   --margin-top: 40px;

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -31,29 +32,9 @@
                 <side-bar-component data-source="side-bar-data"></side-bar-component>
                 <!-- =====End Side bar===== -->
 
-                <!-- =====Start calendar container===== -->
-                <section class="calendar-container">
-                    <section class="calendar-header">
-                        <p class="current-date"></p>
-                        <div class="icons">
-                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
-                            <span id="next" class="material-symbols-rounded">chevron_right</span>
-                        </div>
-                    </section>
-                        <div class="main-calendar">
-                        <ul class="weeks">
-                            <li>Sun</li>
-                            <li>Mon</li>
-                            <li>Tue</li>
-                            <li>Wed</li>
-                            <li>Thu</li>
-                            <li>Fri</li>
-                            <li>Sat</li>
-                        </ul>
-                        <ul class="days"></ul>
-                        </div>
-                </section>
-                <!-- =====End calendar container===== -->
+                <!-- =====Start Contact Us container===== -->
+                <developer-info-component data-source="developer-info-data"></developer-info-component>
+                <!-- =====End Contact Us container===== -->
             </section>
         </main>
         <!-- =====End scope container===== -->
@@ -66,14 +47,14 @@
     
     
   </body>
-  <!-- Import JavaScript file for a calendar in this website -->
-  <script src="../src/js/calendar.js"></script>
   <!-- Import JavaScript file for a functionality file in this website -->
   <script src="../src/js/main.js"></script>
   <!-- Import link navigation bar component -->
   <script type="module" src="../src/js/component/nav-bar-component.js"></script>
   <!-- Import link side bar component -->
   <script type="module" src="../src/js/component/side-bar-component.js"></script>
+  <!-- Import link developer information component -->
+  <script type="module" src="../src/js/component/developer-info-component.js"></script>
   <!-- Import link footer component -->
   <script type="module" src="../src/js/component/footer-component.js"></script>
   </html>
