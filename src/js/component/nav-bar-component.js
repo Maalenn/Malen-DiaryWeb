@@ -39,7 +39,7 @@ const NavigationBarContainer = (menuContents) => {
                         </button>
                         <div class="search-title">Search...</div>
                     </div>
-                    <a href="/khunmalen-diary-web/public/account.html"><span class="material-symbols-outlined">person</span></a>
+                    <a href="/khunmalen-diary-web/public/contact-us.html"><span class="material-symbols-outlined">person</span></a>
                 </section>
             </nav>
         </header>
