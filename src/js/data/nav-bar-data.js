@@ -1,6 +1,16 @@
 // Here is a data of menu list in navigation bar
 export const NavBarMenuData = [
-    "Home",
-    "Calendar",
-    "About Us"
-]
+    {
+      menuLink: "/khunmalen-diary-web/index.html",
+      menuTitle: "Home",
+    },
+    {
+      menuLink: "/khunmalen-diary-web/public/calendar.html",
+      menuTitle: "Calendar",
+    },
+    {
+      menuLink: "/khunmalen-diary-web/public/about-us.html",
+      menuTitle: "About Us",
+    }
+  ];
+  
