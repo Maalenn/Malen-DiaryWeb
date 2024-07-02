@@ -12,6 +12,7 @@
 @import url('./calendar.css');
 /* Import Account style link */
 @import url('./contact-us.css');
+@import url('./about-us.css');
 /* =====Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap =====*/
 :root {
   /* For font */
