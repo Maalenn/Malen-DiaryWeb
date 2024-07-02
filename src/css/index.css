@@ -18,6 +18,7 @@
   /* For font */
   --font-style: "Andika", sans-serif;
   --font-list: 16px;
+  --font-large: 32px;
   /* For Gap */
   --menu-gap: 2rem;
   /* For color and backgroun-color */
@@ -30,6 +31,8 @@
   --color-title-entry: #DED0B6;
   --popup-text-color: #C7C8CC;
   --calendar-bg: #F8F4E1;
+  --about-us-odd-color: #E0FBE2;
+  --about-us-even-color: #CAF4FF;
   /* For border radius */
   --radius-circle: 100%;
   --border-radius: 30px;

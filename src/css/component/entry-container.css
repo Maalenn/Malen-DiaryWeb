@@ -74,6 +74,10 @@ hr {
 .entry-title h3 {
   font-size: var(--font-list);
   color: var(--color-dark-blue);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
 }
 
 /* Entry content in entry container*/
@@ -151,12 +155,12 @@ hr {
 
 /* Entry title of form popup*/
 #title {
-  font-size: 32px;
+  font-size: var(--font-large);
   color: var(--color-dark-blue);
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
-  
+  overflow: hidden; 
+  text-transform: capitalize;
 }
 
 /* Entry content of form popup*/
@@ -193,7 +197,9 @@ hr {
     grid-template-columns: 0px 3fr;
     gap: 0;
   }
-
+  #title, #content{
+    font-size: var(--font-list);
+  }
 }
 
 /* =====End Body Entry container===== */
