@@ -27,7 +27,7 @@ const NavigationBarContainer = (menuContents) => {
                 ${menuContents
                   .map(
                     (items) => `
-                     <li class="list-top"><a href="" class="list-item">${items}</a></li>
+                     <li class="list-top"><a href="${items.menuLink}" class="list-item">${items.menuTitle}</a></li>
                 `
                   )
                   .join("")}  
@@ -39,7 +39,7 @@ const NavigationBarContainer = (menuContents) => {
                         </button>
                         <div class="search-title">Search...</div>
                     </div>
-                    <span class="material-symbols-outlined">person</span>
+                    <a href="/khunmalen-diary-web/public/account.html"><span class="material-symbols-outlined">person</span></a>
                 </section>
             </nav>
         </header>
