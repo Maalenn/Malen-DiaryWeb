@@ -24,7 +24,7 @@ const SideBarContainer = (sideContents) => {
               .map(
                 (items) => `
               <li class="side-bar-list">
-                <a href="">
+                <a href="${items.menuLink}">
                   <div>
                     <span class="material-symbols-outlined">${items.menuIcon}</span>
                     <div>${items.menuTitle}</div>
