@@ -8,7 +8,8 @@ const dataSources = {
   "about-us-data": AboutUsData,
 };
 
-// =====Start the component that map list menu in about us=====
+// =====Start the component that map list menu in about us page=====
+// It will map to about us content 
 const AboutUsContainer = (aboutUsContents) => {
   return `
           <section class="main-about-us">
@@ -32,7 +33,7 @@ const AboutUsContainer = (aboutUsContents) => {
             </section>
     `;
 };
-// =====End the component that map list menu in about===== 
+// =====End the component that map list menu in about us page===== 
 
 // Create one class to working with my component
 class AboutUs extends HTMLElement {
@@ -43,7 +44,7 @@ class AboutUs extends HTMLElement {
   }
 }
 
-// For the 'side-bar-component' is component's name
+// For the 'about-us-component' is component's name
 customElements.define("about-us-component", AboutUs);
 
-// =====End the component that map list menu in side bar=====
+// =====End the component that map list menu in about us=====

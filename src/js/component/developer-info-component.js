@@ -8,7 +8,7 @@ const dataSources = {
   "developer-info-data": DeveloperInfoData,
 };
 
-// =====Start the component that map div menu in information=====
+// =====Start the component that map div menu in developer information content=====
 const DeveloperInfoContainer = (infoContents) => {
   return `
         <section class="developer-container">
@@ -26,7 +26,7 @@ const DeveloperInfoContainer = (infoContents) => {
         </section>
     `;
 };
-// =====End the component that map div menu in information===== 
+// =====End the component that map div menu in developer information content===== 
 
 // Create one class to working with my component
 class DeveloperInfo extends HTMLElement {
@@ -40,4 +40,4 @@ class DeveloperInfo extends HTMLElement {
 // For the 'developer-info-component' is component's name
 customElements.define("developer-info-component", DeveloperInfo);
 
-// =====End the component that map list menu in developer info=====
+// =====End the component that map list menu in developer information content=====

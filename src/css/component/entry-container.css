@@ -5,7 +5,7 @@
   display: flex;
   justify-content: end;
 }
-.new-btn-container:hover{
+.new-btn-container:hover {
   opacity: 0.8;
 }
 .btn-new {
@@ -26,7 +26,7 @@
 .main-container {
   display: grid;
   grid-template-columns: 250px 3fr;
-  gap: var(--menu-gap);
+  gap: var(--spacing-gap);
 }
 .main-entry {
   margin-top: var(----main-entry-margin-top);
@@ -35,11 +35,11 @@
 #entries-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--menu-gap);
+  gap: var(--spacing-gap);
   margin-top: var(----main-entry-margin-top);
 }
 .entry-to-container > div {
-  font-size: var(--font-list);
+  font-size: var(--font-small);
 }
 .entry {
   display: flex;
@@ -66,13 +66,13 @@ hr {
 /* Entry title container */
 .entry-title {
   text-align: center;
-  background: var(--color-title-entry);
+  background: var(--bg-entry-color);
   height: 40px;
 }
 
 /* Entry title in entry container */
 .entry-title h3 {
-  font-size: var(--font-list);
+  font-size: var(--font-small);
   color: var(--color-dark-blue);
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -135,7 +135,7 @@ hr {
   height: 80%;
   background: var(--color-white);
   flex-direction: column;
-  border-radius: var(--diary-radius);
+  border-radius: var(--border-radius-ten);
 }
 
 /* Inside has date, content, title */
@@ -143,7 +143,7 @@ hr {
   display: flex;
   flex-direction: column;
   margin: 40px 15px;
-  gap: var(--menu-gap);
+  gap: var(--spacing-gap);
 }
 
 /* Entry date of form popup*/
@@ -158,13 +158,13 @@ hr {
   color: var(--color-dark-blue);
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   text-transform: capitalize;
 }
 
 /* Entry content of form popup*/
 #content {
-  font-size: var(--font-list);
+  font-size: var(--font-small);
   height: 300px;
   width: 100%;
   resize: none;
@@ -173,7 +173,7 @@ hr {
 /* Button container in form popup */
 .btn-container-popup {
   display: flex;
-  gap: var(--menu-gap);
+  gap: var(--spacing-gap);
   margin-top: var(--margin-top);
 }
 
@@ -183,7 +183,7 @@ hr {
   background: var(--color-dark-blue);
   color: var(--color-white);
   padding: 10px;
-  border-radius: var(--diary-radius);
+  border-radius: var(--border-radius-ten);
 }
 #cancel-button {
   background: var(--color-dark-red);
@@ -196,8 +196,9 @@ hr {
     grid-template-columns: 0px 3fr;
     gap: 0;
   }
-  #title, #content{
-    font-size: var(--font-list);
+  #title,
+  #content {
+    font-size: var(--font-small);
   }
 }
 

@@ -4,15 +4,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+/* Works for calendar container */
 .calendar-container{
   max-width: 900px;
   background: #fff;
   height: 400px;
-  border-radius: var(--diary-radius);
+  border-radius: var(--border-radius-ten);
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
   background: var(--calendar-bg);
   margin-top: var(--margin-top-high);
 }
+/* It is the header of the calendar container */
 .calendar-header{
   display: flex;
   align-items: center;
@@ -43,6 +45,7 @@
   font-size: 1.45rem;
   font-weight: 500;
 }
+/* Main container */
 .main-calendar{  
   padding: 20px;
 }
@@ -56,6 +59,7 @@
   margin-bottom: 20px;
   
 }
+/* For list in calendar */
 .main-calendar li{
   color: #333;
   width: calc(100% / 7);
