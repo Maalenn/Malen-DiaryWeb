@@ -61,7 +61,14 @@ I have to create a brand new website called “Daily Application” . For the ma
 
 ## Usage
 
-    After starting the development server, open your browser and navigate to http://localhost:3000. You should see the KhunMalen Diary Web application running. From here, you can start using this website that it will store your noted in the localStorage.
+1. Open index.html in your web browser.
+2. Click on the "New" button on the Navigation Bar to create a new entry.
+3. Fill in the date, title, and description, then submit the form.
+4. If you don't want to create just click on cancel button 
+5. In case you click on create button the new note will be displayed in the notes list.
+6. Use the edit button to manage update an entry.
+7. Use the delete button to manage delete an entry
+8. You can everywhere in entry to view entry accept only edit and delete button if you click one of them it will do its functionally as mention abbove
 
 ## Folder Structure
 
@@ -135,6 +142,7 @@ Link: https://www.figma.com/design/KNsqcVqRe3xnOBJthfd2eu/Daily-Website-Applicat
 
 
 ## Conventions
+Link: https://docs.google.com/document/d/1iI1SJzsmj1Sqd75BfzLfhqegqeu79hUyRjEDbHO7BJc/edit?usp=sharing
 Below are in Convention
 ## Commenting
 
