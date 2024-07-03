@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const entriesContainer = document.getElementById("entries-container");
     const formPopup = document.getElementById("form-popup");
     const openFormButton = document.getElementById("open-form-button");
-    const openFormButton1 = document.getElementById("open-form-button-below");
     const cancelButton = document.getElementById("cancel-button");
     const createButton = document.getElementById("submit-button");
     let entries = [];
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Change z-index of side bar
         document.querySelector(".side-bar").style.zIndex = "99";
     };
-
+    // This is working for saving data in local storage
     const saveEntries = () => {
         localStorage.setItem("diary-entries", JSON.stringify(entries));
     };
@@ -99,39 +98,39 @@ document.addEventListener("DOMContentLoaded", () => {
         entries = storedEntries ? JSON.parse(storedEntries) : [];
     };
 
-  const displayEntries = () => {
-    // Main entries container: all entries after create will appended to this scope
-    entriesContainer.innerHTML = "";
-
-    entries.forEach((entry, index) => {
-      const entryDiv = document.createElement("div");
-      entryDiv.classList.add("entry");
-      entryDiv.innerHTML = `
-          <section class="entry-to-container"> 
-              <div> Date: ${entry.date} </div>
-                  <hr>
-                  <section class="btn-edit-delete-container">
-                      <button onclick="editEntry(${index}, event)">
-                          <span class="material-symbols-outlined edit-btn">edit</span></button>
-                      <button onclick="deleteEntry(${index}, event)">
-                          <span class="material-symbols-outlined delete-btn">delete</span>
-                      </button> 
-                  </section>
-              <div>
-                  <p>${entry.content}</p> 
-              </div>
-          </section>
-          <div class="entry-title">
-              <hr> 
-              <h3>${entry.title}</h3>
-          </div>
-          
-        `;
-      entryDiv.addEventListener("click", () => viewEntry(index));
-      entriesContainer.appendChild(entryDiv);
-    });
+    const displayEntries = () => {
+        // Main entries container: all entries after create will appended to this scope
+        entriesContainer.innerHTML = "";
+        // Loop entry content when entry create
+        entries.forEach((entry, index) => {
+        const entryDiv = document.createElement("div");
+        entryDiv.classList.add("entry");
+        entryDiv.innerHTML = `
+            <section class="entry-to-container"> 
+                <div> Date: ${entry.date} </div>
+                    <hr>
+                    <section class="btn-edit-delete-container">
+                        <button onclick="editEntry(${index}, event)">
+                            <span class="material-symbols-outlined edit-btn">edit</span></button>
+                        <button onclick="deleteEntry(${index}, event)">
+                            <span class="material-symbols-outlined delete-btn">delete</span>
+                        </button> 
+                    </section>
+                <div>
+                    <p>${entry.content}</p> 
+                </div>
+            </section>
+            <div class="entry-title">
+                <hr> 
+                <h3>${entry.title}</h3>
+            </div>
+            
+            `;
+        entryDiv.addEventListener("click", () => viewEntry(index));
+        entriesContainer.appendChild(entryDiv);
+        });
   };
-    // This function working when user click every where on entry accept  edit and delete icon
+    //View: This function working when user click every where on entry accept edit and delete icon
     window.viewEntry = (index) => {
         const entry = entries[index];
         const titleElement = document.getElementById("title");
@@ -154,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         disableScroll_EnableBlur();
       };
 
-    // This function working when user click on edit icon on entry
+    //Update: This function working when user click on edit icon on entry
     window.editEntry = (index, event) => {
         event.stopPropagation();
         const entry = entries[index];
@@ -167,11 +166,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Show the create button
         createButton.style.display = "block";
         // Make fields editable
-
         document.getElementById("title").readOnly = false;
         document.getElementById("content").readOnly = false;
         document.getElementById("date").readOnly = false;
-
         disableScroll_EnableBlur();
   };
 

@@ -1,4 +1,5 @@
 // =====Start the component form popup=====
+// It will works when user click on New button, edit button and click on entry to view but for view it will hide create buuton in home page 
 const FormPopupEntryContainer = () => {
   return `
         <section class="main-entry">

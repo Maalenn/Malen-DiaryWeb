@@ -13,11 +13,7 @@ KhunMalen Diary Web is a web-based application for managing and viewing personal
 - [Information Architechture](#information-technology)
 - [UI Prototype & UI Design Screen & Flow Guide](#ui-ux)
 - [Conventions](#conventions)
-    - [Commenting](#commenting)
-    - [Filenames](#filenames)
-    - [Variable Names, Capitalization, and Conventions](#variable-names-capitalization-and-conventions)
-    - [Guidelines](#guidelines)
-- [Contributing](#contributing)
+- [Style Guide](#style-guide)
 
 ## Introduction
 
@@ -139,96 +135,28 @@ Link: https://www.figma.com/board/GLvFq9HwKdN25MAOwfc6Ub/Information-Architectur
 ## UI Prototype & UI Design Screen & Flow Guide
 Link: https://www.figma.com/design/KNsqcVqRe3xnOBJthfd2eu/Daily-Website-Application?node-id=32-893&t=02xLKRpnues65UxE-1
 
-
-
 ## Conventions
-Link: https://docs.google.com/document/d/1iI1SJzsmj1Sqd75BfzLfhqegqeu79hUyRjEDbHO7BJc/edit?usp=sharing
+Link: https://www.notion.so/Convention-Guide-For-3rd-Mission-075e70a262f94b168f1f7458bb2b28c1?pvs=4
 Below are in Convention
-## Commenting
 
-1. For a large block of code or necessary code:
-- HTML:
-    <!-- =====Start Nav bar=====  -->
-        ……………………….……………………….
-        //Block of code 
-        ……………………….……………………….
-    <!--  =====End Nav bar===== -->
-- CSS:
-    /* =====Start Nav bar===== */
-        ……………………….……………………….
-        //Block of code 
-        ……………………….……………………….
-    /* =====End Nav bar===== */
-- JavaScript:
-    //  =====Start Nav bar===== 
-        ……………………….……………………….
-        //Block of code 
-        ……………………….……………………….
-    // =====End Nav bar=====
-2. For a small block of code with description:
-- HTML:
-    <!-- Start Nav bar  -->
-        ……………………….……………………….
-        //Block of code 
-        ……………………….……………………….
-    <!-- End Nav bar -->
-- CSS:
-    /* Start Nav bar */
-        ……………………….……………………….
-        //Block of code 
-        ……………………….……………………….
-    /* End Nav bar */
-- JavaScript
-    //  Start Nav bar
-        ……………………….……………………….
-        //Block of code 
-        ……………………….……………………….
-    // End Nav bar
-3. For a small block of code without needing much description:
-- HTML
-    <!-- Import Js link -->
-        ...block of code...
-- CSS
-    /* Search on navigation bar main container */
-        ...block of code...
--JavaScript
-    // Remove background blur
-        ...block of code...
-## Filenames
-- Use descriptive and all lowercase filenames.
-Example: corporate-history.html
-
-## Variable Names, Capitalization, and Conventions
-When working in a team, consistency in variable naming, capitalization, and conventions is crucial for maintaining code readability and facilitating collaboration. Here are some guidelines commonly followed in JavaScript development:
-    1. __Use Descriptive Names: Choose variable names that accurately describe their purpose or content. Avoid overly abbreviated or cryptic names that may be unclear to others.
-    2. __CamelCase: For variable names with multiple words, use CamelCase, where each word (except the first) is capitalized. This convention enhances readability and is widely adopted in JavaScript.
-    Example: userName, totalAmount, customerDetails
-    3. __Avoid Single-letter Names: Except for loop counters (i, j, k), avoid using single-letter variable names, as they are often ambiguous and do not provide enough context.
-    4. __Be Consistent: Follow the established naming conventions within your personal project. Consistency is key to making code understandable and maintainable for everyone involved.
-    5. __Meaningful Prefixes: Use meaningful prefixes for variables that represent specific types of data, such as is for boolean variables or arr for arrays.
-    Example: isCompleted, arrNames
-    6. __Avoid Reserved Words: Do not use JavaScript reserved words as variable names, as they have predefined meanings and can lead to confusion or errors.
-    7. __Use Clear, Intuitive Names: Prioritize clarity and intuitiveness over brevity. Aim for names that clearly convey the purpose of the variable without requiring additional comments or documentation. 
-
-## Guidelines
-/* =====Start Guide Line: use for make a guide line that use in the project such as color, padding, margin, gap =====*/
+## Style Guide
 :root {
   /* For font */
   --font-style: "Andika", sans-serif;
-  --font-list: 16px;
+  --font-small: 16px;
   --font-large: 32px;
 
   /* For Gap */
-  --menu-gap: 2rem;
+  --spacing-gap: 2rem;
 
   /* For color and backgroun-color */
   --color-dark-blue: #2c4759;
   --color-white: white;
   --icon-search-bg: #e9e9e9;
-  --nav-bar-bg: #ecb176;
+  --bg-main-color: rgb(236, 177, 118);
   --side-bar-bg: #ead8c0;
   --color-dark-red: #941313;
-  --color-title-entry: #DED0B6;
+  --bg-entry-color: #DED0B6;
   --popup-text-color: #C7C8CC;
   --calendar-bg: #F8F4E1;
   --about-us-odd-color: #E0FBE2;
@@ -236,14 +164,14 @@ When working in a team, consistency in variable naming, capitalization, and conv
 
   /* For border radius */
   --radius-circle: 100%;
-  --border-radius: 30px;
-  --diary-radius: 10px;
+  --border-radius-medium: 30px;
+  --border-radius-ten: 10px;
 
   /* For padding */
   --padding-button: 5px;
-  --padding-default: 40px;
+  --padding-ml: 15px;
+  --padding-large: 40px;
   --padding-center: 0 50px;
-  --padding-default: 15px;
   --icon-search: 20px 0 0 20px;
 
   /* For Margin */
@@ -252,5 +180,4 @@ When working in a team, consistency in variable naming, capitalization, and conv
   --margin-top-ten: 10px;
   --main-entry-margin-top : 13px;
 }
-/* =====End Guide Line===== */
 

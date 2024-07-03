@@ -1,4 +1,4 @@
-// Here is the data of menu list in sidebar
+// Here is the data of menu list in contact us
 export const DeveloperInfoData = [
     {
       infoLabel: "Name:",
