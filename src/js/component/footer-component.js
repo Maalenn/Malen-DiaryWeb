@@ -1,6 +1,6 @@
 // =====Start footer with dynamic component=====
 
-// Import data from data file 
+// Import data from data file
 import { FooterData } from "../data/footer-data.js";
 
 // Declare variable 'dataSources' to set 'footer-data' and can use it in html file
@@ -14,9 +14,9 @@ const FooterContainer = (footerContents) => {
         <footer class="footer">
             <section class="footer-container container-max-width">
                 <div class="footer-logo"> 
-                    <div class="logo">
+                    <a href="/khunmalen-diary-web/index.html" class="logo">
                         <img src="/khunmalen-diary-web/src/image/logo.png" alt="" />
-                    </div>
+                    </a>
                     <h1>Khun Malen</h1>
                 </div>
                 <ul class="footer-menu">
@@ -47,6 +47,5 @@ class Footer extends HTMLElement {
 
 // For the 'footer-component' is component's name
 customElements.define("footer-component", Footer);
-
 
 // =====End the component that map list menu in footer=====

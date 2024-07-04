@@ -1,4 +1,5 @@
-function openSideBar() {
+// This function will enable a sidebar when user click on menu bar button
+function enableSideBar() {
   // Add class openSideBar to side-bar
   document.querySelector(".side-bar").classList.add("open-sideBar");
   // Make what is behind sidebar non-scrollable
@@ -7,7 +8,8 @@ function openSideBar() {
   document.querySelector(".background-blur").classList.remove("bg-blur");
 }
 
-function closeSideBar() {
+// This function will disable a sidebar when user click on cross button
+function disableSideBar() {
   // Remove class openSideBar from side-bar
   document.querySelector(".side-bar").classList.remove("open-sideBar");
   // Allow scrolling
@@ -15,4 +17,3 @@ function closeSideBar() {
   // Remove blur from background
   document.querySelector(".background-blur").classList.add("bg-blur");
 }
-

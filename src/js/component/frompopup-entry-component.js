@@ -1,4 +1,5 @@
 // =====Start the component form popup=====
+// It will works when user click on New button, edit button and click on entry to view but for view it will hide create buuton in home page
 const FormPopupEntryContainer = () => {
   return `
         <section class="main-entry">
@@ -12,7 +13,7 @@ const FormPopupEntryContainer = () => {
                             <div class="logo">
                                 <img src="/khunmalen-diary-web/src/image/logo.png" alt="Logo" />
                             </div>
-                            <h3>Diary Website Application</h3>
+                            <h2>Diary Website Application</h2>
                         </div>
                     </nav>
                 </section>
@@ -32,9 +33,9 @@ const FormPopupEntryContainer = () => {
 
 // Create one class to working with Form Popup component
 class FormPopupEntry extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = FormPopupEntryContainer();
-    }
+  connectedCallback() {
+    this.innerHTML = FormPopupEntryContainer();
+  }
 }
 
 // Create a name component called 'formpopup-entry-component'

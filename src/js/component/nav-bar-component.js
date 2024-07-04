@@ -1,6 +1,6 @@
 // =====Start Navigation Bar with dynamic component=====
 
-// Import data from data file 
+// Import data from data file
 import { NavBarMenuData } from "../data/nav-bar-data.js";
 
 // Declare variable 'dataSources' to set 'nav-bar-menu-data' and can use it in html file
@@ -13,14 +13,14 @@ const NavigationBarContainer = (menuContents) => {
   return `
         <header class="header">
             <nav class="navigation-bar container-max-width">
-                <button class="menu-bar-icon" onclick="openSideBar()">
+                <button class="menu-bar-icon" onclick="enableSideBar()">
                     <span class="material-symbols-outlined menu-bar"> menu </span>
                 </button>
                     <h1>Diary Website Application</h1>
                 <div class="navigation-left">
-                    <div class="logo">
+                    <a href="/khunmalen-diary-web/index.html" class="logo">
                         <img src="/khunmalen-diary-web/src/image/logo.png" alt="" />
-                    </div>
+                    </a>
                     <h3>Diary Website Application</h3>
                 </div>
                 <ul class="navigation-menu">
@@ -58,6 +58,5 @@ class NavigationBarMenu extends HTMLElement {
 
 // Create a name component called 'navigation-bar-component'
 customElements.define("navigation-bar-component", NavigationBarMenu);
-
 
 // =====End the component that map list menu in navigation bar=====

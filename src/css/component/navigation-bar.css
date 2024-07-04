@@ -1,9 +1,9 @@
-
 /* =====Start Navigation Bar===== */
-.header, .header1{
-  background: var(--nav-bar-bg);
+.header,
+.header1 {
+  background: var(--bg-main-color);
 }
-.header1{
+.header1 {
   border-radius: 8px 8px 0 0;
 }
 .navigation-bar {
@@ -19,7 +19,7 @@
 .navigation-left {
   display: flex;
   align-items: center;
-  gap: var(--menu-gap);
+  gap: var(--spacing-gap);
 }
 
 /* Nav bar left logo */
@@ -43,7 +43,7 @@
 /* =====Start Navigation menu container===== */
 .navigation-menu {
   display: flex;
-  gap: var(--menu-gap);
+  gap: var(--spacing-gap);
   color: var(--color-dark-blue);
 }
 /* =====End Navigation menu container===== */
@@ -53,17 +53,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--menu-gap);
+  gap: var(--spacing-gap);
 }
 
 /* Search on nav bar main container */
 .search-container {
   display: flex;
-  gap: (--menu-gap);
+  gap: (--spacing-gap);
   align-items: center;
   width: 140px;
   height: 47px;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-medium);
   background: var(--color-white);
 }
 
@@ -81,7 +81,7 @@
 /* Search Title */
 .search-title {
   color: #686363;
-  font-size: var(--font-list);
+  font-size: var(--font-small);
 }
 
 /* Person Icon */
