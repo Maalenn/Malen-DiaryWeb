@@ -9,6 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const createButton = document.getElementById("submit-button");
   let entries = [];
 
+  // This function use for disable scroll and Enable backgroud blur
+  const disableScroll_EnableBlur = () => {
+    // Make what is behind form non-scrollable
+    document.querySelector("html").classList.add("overflow-y-hidden");
+    // Make what is behind form blur
+    document.querySelector(".background-blur").classList.remove("bg-blur");
+    // Change z-index of side bar
+    document.querySelector(".side-bar").style.zIndex = "1";
+  };
+
+  // This function use for enable scroll and disable backgroud blur
+  const enableScroll_DisableBlur = () => {
+    // Allow scrolling
+    document.querySelector("html").classList.remove("overflow-y-hidden");
+    // Remove blur from background
+    document.querySelector(".background-blur").classList.add("bg-blur");
+    // Change z-index of side bar
+    document.querySelector(".side-bar").style.zIndex = "99";
+  };
+
   // This function working when user click on New button in Form Popup
   // It will show a Popup form on screen
   openFormButton.addEventListener("click", () => {
@@ -68,26 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please fill in all fields.");
     }
   });
-
-  // This function use for disable scroll and Enable backgroud blur
-  const disableScroll_EnableBlur = () => {
-    // Make what is behind form non-scrollable
-    document.querySelector("html").classList.add("overflow-y-hidden");
-    // Make what is behind form blur
-    document.querySelector(".background-blur").classList.remove("bg-blur");
-    // Change z-index of side bar
-    document.querySelector(".side-bar").style.zIndex = "1";
-  };
-
-  // This function use for enable scroll and disable backgroud blur
-  const enableScroll_DisableBlur = () => {
-    // Allow scrolling
-    document.querySelector("html").classList.remove("overflow-y-hidden");
-    // Remove blur from background
-    document.querySelector(".background-blur").classList.add("bg-blur");
-    // Change z-index of side bar
-    document.querySelector(".side-bar").style.zIndex = "99";
-  };
   // This is working for saving data in local storage
   const saveEntries = () => {
     localStorage.setItem("diary-entries", JSON.stringify(entries));
@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries = storedEntries ? JSON.parse(storedEntries) : [];
   };
 
+  //This is a function that working for showing entry after created 
   const displayEntries = () => {
     // Main entries container: all entries after create will appended to this scope
     entriesContainer.innerHTML = "";

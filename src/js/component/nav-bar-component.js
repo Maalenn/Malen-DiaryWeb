@@ -18,9 +18,9 @@ const NavigationBarContainer = (menuContents) => {
                 </button>
                     <h1>Diary Website Application</h1>
                 <div class="navigation-left">
-                    <div class="logo">
+                    <a href="/khunmalen-diary-web/index.html" class="logo">
                         <img src="/khunmalen-diary-web/src/image/logo.png" alt="" />
-                    </div>
+                    </a>
                     <h3>Diary Website Application</h3>
                 </div>
                 <ul class="navigation-menu">
