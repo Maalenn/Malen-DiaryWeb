@@ -14,19 +14,19 @@ const DeveloperInfoContainer = (infoContents) => {
         <section class="developer-container">
             <div class="info-title">Developer Information</div>
             ${infoContents
-                .map(
+              .map(
                 (items) => `
                     <div class="info-developer">
                         <h2>${items.infoLabel}</h2>
                         <p>${items.infoDes}</p>
                     </div> 
                 `
-                )
-                .join("")}
+              )
+              .join("")}
         </section>
     `;
 };
-// =====End the component that map div menu in developer information content===== 
+// =====End the component that map div menu in developer information content=====
 
 // Create one class to working with my component
 class DeveloperInfo extends HTMLElement {

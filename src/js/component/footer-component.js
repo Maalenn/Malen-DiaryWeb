@@ -1,6 +1,6 @@
 // =====Start footer with dynamic component=====
 
-// Import data from data file 
+// Import data from data file
 import { FooterData } from "../data/footer-data.js";
 
 // Declare variable 'dataSources' to set 'footer-data' and can use it in html file
@@ -47,6 +47,5 @@ class Footer extends HTMLElement {
 
 // For the 'footer-component' is component's name
 customElements.define("footer-component", Footer);
-
 
 // =====End the component that map list menu in footer=====

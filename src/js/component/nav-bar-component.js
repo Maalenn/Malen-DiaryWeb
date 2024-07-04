@@ -1,6 +1,6 @@
 // =====Start Navigation Bar with dynamic component=====
 
-// Import data from data file 
+// Import data from data file
 import { NavBarMenuData } from "../data/nav-bar-data.js";
 
 // Declare variable 'dataSources' to set 'nav-bar-menu-data' and can use it in html file
@@ -58,6 +58,5 @@ class NavigationBarMenu extends HTMLElement {
 
 // Create a name component called 'navigation-bar-component'
 customElements.define("navigation-bar-component", NavigationBarMenu);
-
 
 // =====End the component that map list menu in navigation bar=====
