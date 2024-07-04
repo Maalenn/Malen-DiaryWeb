@@ -9,7 +9,7 @@ const dataSources = {
 };
 
 // =====Start the component that map list menu in about us page=====
-// It will map to about us content 
+// It will map to about us content
 const AboutUsContainer = (aboutUsContents) => {
   return `
           <section class="main-about-us">
@@ -33,7 +33,7 @@ const AboutUsContainer = (aboutUsContents) => {
             </section>
     `;
 };
-// =====End the component that map list menu in about us page===== 
+// =====End the component that map list menu in about us page=====
 
 // Create one class to working with my component
 class AboutUs extends HTMLElement {

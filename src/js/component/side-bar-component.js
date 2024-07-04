@@ -40,7 +40,7 @@ const SideBarContainer = (sideContents) => {
           </aside>
     `;
 };
-// =====End the component that map list menu in side bar===== 
+// =====End the component that map list menu in side bar=====
 
 // Create one class to working with my component
 class SideBarMenu extends HTMLElement {

@@ -7,13 +7,13 @@
 /* Import Entry container component style link */
 @import url("./component/entry-container.css");
 /* Import Footer component style link */
-@import url('./component/footer.css');
+@import url("./component/footer.css");
 /* Import Calendar style link */
-@import url('./calendar.css');
+@import url("./calendar.css");
 /* Import contact style link */
-@import url('./contact-us.css');
+@import url("./contact-us.css");
 /* Import About Us style link*/
-@import url('./about-us.css');
+@import url("./about-us.css");
 /* =====Start style Guide: use for make a guide line that use in the project such as color, padding, margin, gap =====*/
 :root {
   /* For font */
@@ -29,11 +29,11 @@
   --bg-main-color: rgb(236, 177, 118);
   --side-bar-bg: #ead8c0;
   --color-dark-red: #941313;
-  --bg-entry-color: #DED0B6;
-  --popup-text-color: #C7C8CC;
-  --calendar-bg: #F8F4E1;
-  --about-us-odd-color: #E0FBE2;
-  --about-us-even-color: #CAF4FF;
+  --bg-entry-color: #ded0b6;
+  --popup-text-color: #c7c8cc;
+  --calendar-bg: #f8f4e1;
+  --about-us-odd-color: #e0fbe2;
+  --about-us-even-color: #caf4ff;
   /* For border radius */
   --radius-circle: 100%;
   --border-radius-medium: 30px;
@@ -48,7 +48,7 @@
   --margin-top: 40px;
   --margin-top-high: 50px;
   --margin-top-ten: 10px;
-  --main-entry-margin-top : 13px;
+  --main-entry-margin-top: 13px;
 }
 /* =====End Guide Line===== */
 
@@ -93,7 +93,8 @@ p {
 }
 
 /* Remove outline when focus on textarea and input */
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
   outline: none;
 }
 
@@ -109,15 +110,15 @@ textarea:focus, input:focus{
 .container-max-width {
   max-width: 100%;
   padding: var(--padding-center);
-} 
+}
 
 /* Main contanier of side bar container and entries container */
-.main-container{
+.main-container {
   margin-top: var(--margin-top-ten);
 }
 
 /* Backgroud blur style */
-.background-blur{
+.background-blur {
   position: fixed;
   top: 0;
   width: 100%;
@@ -128,17 +129,17 @@ textarea:focus, input:focus{
 }
 
 /* Disable blur background when side bar break point or form popup not yet show */
-.background-blur.bg-blur{
+.background-blur.bg-blur {
   opacity: 0;
   visibility: hidden;
 }
 
 /* Visible scroll when side bar break point or form popup not yet show */
-html{
+html {
   overflow-y: scroll;
 }
 
-/* Disable scroll when side bar break point or form popup show */ 
+/* Disable scroll when side bar break point or form popup show */
 html.overflow-y-hidden {
   overflow-y: hidden;
 }

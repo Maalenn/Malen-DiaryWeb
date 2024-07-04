@@ -24,13 +24,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 .app-image {
   width: 80px;
   border-radius: var(--radius-circle);
 }
-.app-image > img{
+.app-image > img {
   width: 100%;
 }
 /* Menu list in side bar  */

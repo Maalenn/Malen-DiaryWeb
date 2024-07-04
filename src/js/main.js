@@ -17,4 +17,3 @@ function disableSideBar() {
   // Remove blur from background
   document.querySelector(".background-blur").classList.add("bg-blur");
 }
-
