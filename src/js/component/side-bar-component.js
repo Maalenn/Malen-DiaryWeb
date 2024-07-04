@@ -16,9 +16,9 @@ const SideBarContainer = (sideContents) => {
               <span class="material-symbols-outlined">close</span>
             </button>
             <section class="app-container">
-              <div class="app-image">
+              <a href="/khunmalen-diary-web/index.html" class="app-image">
                 <img src="/khunmalen-diary-web/src/image/logo.png" alt="" />
-              </div>
+              </a>
               <h2>To Do List</h2>
             </section>
             <ul class="menu-side-bar">

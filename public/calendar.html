@@ -31,37 +31,29 @@
       <!-- =====Start scope container: use to scope new button, side bar, entries-container===== -->
       <main class="main-scope-container">
         <section class="main-container container-max-width">
-          <!-- =====Start Side bar: create it as a dashboard===== -->
-          <side-bar-component data-source="side-bar-data"></side-bar-component>
-          <!-- =====End Side bar===== -->
+            <!-- =====Start Side bar: create it as a dashboard===== -->
+            <side-bar-component data-source="side-bar-data"></side-bar-component>
+            <!-- =====End Side bar===== -->
 
-          <!-- =====Start calendar container: it works for showing only calendar===== -->
-          <section class="calendar-container">
-            <section class="calendar-header">
-              <p class="current-date"></p>
-              <div class="icons">
-                <span id="prev" class="material-symbols-rounded"
-                  >chevron_left</span
-                >
-                <span id="next" class="material-symbols-rounded"
-                  >chevron_right</span
-                >
-              </div>
+            <!-- =====Start calendar container: it works for showing only calendar===== -->
+            <section class="calendar-container">
+                <section class="calendar-header">
+                <p class="current-date"></p>
+                <div class="icons">
+                    <span id="prev" class="material-symbols-rounded"
+                    >chevron_left</span
+                    >
+                    <span id="next" class="material-symbols-rounded"
+                    >chevron_right</span
+                    >
+                </div>
+                </section>
+                <div class="main-calendar">
+                    <calendar-component data-source="date-data"> </calendar-component>
+                    <!-- =====End calendar container===== -->
+                    <ul class="days"></ul>
+                </div>
             </section>
-            <div class="main-calendar">
-              <ul class="weeks">
-                <li>Sun</li>
-                <li>Mon</li>
-                <li>Tue</li>
-                <li>Wed</li>
-                <li>Thu</li>
-                <li>Fri</li>
-                <li>Sat</li>
-              </ul>
-              <ul class="days"></ul>
-            </div>
-          </section>
-          <!-- =====End calendar container===== -->
         </section>
       </main>
       <!-- =====End scope container===== -->
@@ -83,6 +75,8 @@
     type="module"
     src="../src/js/component/side-bar-component.js"
   ></script>
+  <!-- Import Calendar component -->
+   <script type="module" src="../src/js/component/calendar-component.js"></script>
   <!-- Import link footer component -->
   <script type="module" src="../src/js/component/footer-component.js"></script>
 </html>

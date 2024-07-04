@@ -14,9 +14,9 @@ const FooterContainer = (footerContents) => {
         <footer class="footer">
             <section class="footer-container container-max-width">
                 <div class="footer-logo"> 
-                    <div class="logo">
+                    <a href="/khunmalen-diary-web/index.html" class="logo">
                         <img src="/khunmalen-diary-web/src/image/logo.png" alt="" />
-                    </div>
+                    </a>
                     <h1>Khun Malen</h1>
                 </div>
                 <ul class="footer-menu">
