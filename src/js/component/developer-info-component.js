@@ -41,3 +41,5 @@ class DeveloperInfo extends HTMLElement {
 customElements.define("developer-info-component", DeveloperInfo);
 
 // =====End the component that map list menu in developer information content=====
+
+// =====End Developer Information with dynamic component=====
