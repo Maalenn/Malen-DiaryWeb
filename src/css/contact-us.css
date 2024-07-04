@@ -11,7 +11,7 @@
   font-size: 32px;
   display: flex;
   justify-content: center;
-  padding: var(--padding-default);
+  padding: var(--padding-large);
 }
 .info-developer {
   display: flex;

@@ -1,4 +1,4 @@
-import '../calendar.js'
+import "../calendar.js";
 // =====Start calendar with dynamic component=====
 
 // Import data from data file
@@ -14,12 +14,12 @@ const CalendarContainer = (calendarContents) => {
   return `
             <ul class="weeks">
             ${calendarContents
-            .map(
+              .map(
                 (items) => `
                 <li>${items}</li>
             `
-            )
-            .join("")} 
+              )
+              .join("")} 
             </ul>       
     `;
 };
