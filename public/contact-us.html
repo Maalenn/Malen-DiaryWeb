@@ -5,20 +5,19 @@
     <title>Dynamic Calendar JavaScript | CodingNepal</title>
     <link rel="stylesheet" href="../src/css/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Import Google Font Link for Icons -->
+    <!-- Google Font Link for Icons -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
   <body>
-    <!-- Start Background blur: it will show blur to backgroud when user click on new button or menu bar icon -->
+    <!-- Start Background blur -->
     <div class="background-blur bg-blur"></div>
     <!-- End Background blur -->
-
     <!-- =====Start body container: this use to scope all important container in body===== -->
     <section class="body-container">
-      <!-- =====Start Navigation bar: it is a navigation bar component===== -->
+      <!-- =====Start Navigation bar:it is a navigation bar component===== -->
       <navigation-bar-component
         data-source="nav-bar-menu-data"
       ></navigation-bar-component>
@@ -26,33 +25,26 @@
 
       <!-- =====Start scope container: use to scope new button, side bar, entries-container===== -->
       <main class="main-scope-container">
-        <section class="container-max-width">
+        <section class="main-container container-max-width">
           <!-- =====Start Side bar: create it as a dashboard===== -->
-          <section class="hide-side-bar">
-            <side-bar-component
-              data-source="side-bar-data"
-            ></side-bar-component>
-          </section>
+          <side-bar-component data-source="side-bar-data"></side-bar-component>
           <!-- =====End Side bar===== -->
 
-          <!-- =====Start about us container: it is a about us content component===== -->
-          <about-us-component data-source="about-us-data"></about-us-component>
-          <!-- =====End about Us container===== -->
+          <!-- =====Start Contact Us container: it will show a developer information===== -->
+          <developer-info-component
+            data-source="developer-info-data"
+          ></developer-info-component>
+          <!-- =====End Contact Us container===== -->
         </section>
       </main>
       <!-- =====End scope container===== -->
 
-      <!-- =====Start Footer: it is a footer component===== -->
+      <!-- =====Start Footer: it is footer component===== -->
       <footer-component data-source="footer-data"> </footer-component>
       <!-- =====End Footer===== -->
     </section>
     <!-- =====End body container===== -->
   </body>
-  <!-- Import link about-us component -->
-  <script
-    type="module"
-    src="../src/js/component/about-us-component.js"
-  ></script>
   <!-- Import JavaScript file for a functionality file in this website -->
   <script src="../src/js/main.js"></script>
   <!-- Import link navigation bar component -->
